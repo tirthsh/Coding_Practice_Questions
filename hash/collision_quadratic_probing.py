@@ -13,7 +13,6 @@ class HashTable:
     #h(x) = x % len(table)
     def hash_function(self, value):
         return value % self.MAX
-        return total_ascii_value % self.MAX
     
     def is_table_full(self):
         return self.element_count == self.MAX
