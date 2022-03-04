@@ -8,7 +8,7 @@ class HashTable:
         self.element_count = 0
 
     #write hash function
-    #hash function which adds ascii value of all characters and returns mod of size of that
+    #h(x) = x % len(table)
     def hash_function(self, value):
         return value % self.MAX
     
@@ -74,15 +74,15 @@ hash_table_obj.add(0, 130)
 print(hash_table_obj.list)
 
 #will add it to next available index
-hash_table_obj.add(1, 111)
+hash_table_obj.add(0, 111)
 print(hash_table_obj.list)
 
-#will add it to next available index
-hash_table_obj.add(2, 222)
+#will add it to next available index since index 1 is taken from above collision
+hash_table_obj.add(1, 222)
 print(hash_table_obj.list)
 
 #hash table is full since size is 3
-hash_table_obj.add(3, 333)
+hash_table_obj.add(2, 333) #ERROR - table is full
 print(hash_table_obj.list)
 
 value_found = hash_table_obj.is_present(222)
