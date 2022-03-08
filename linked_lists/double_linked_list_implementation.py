@@ -5,6 +5,6 @@ class Node:
         self.prev = None
     
 
-class LinkedList:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
