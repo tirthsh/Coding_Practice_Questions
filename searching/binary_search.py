@@ -1,14 +1,15 @@
 def binary_search_iterative(nums, target):
     '''
-    Inputs -> a SORTED array, a target to find
-    Output -> boolean
-    Assumptions -> list is sorted
-    Edge Cases -> 
-    Examples ->
-        nums = [ 2, 3, 4, 10, 40 ]
-        target = 10
-    Algo ->
-    Complexity ->
+    Look through A SORTED LIST of nums, and check if a number exists or not in O(log(N)) time
+
+    Algo:
+    Find the midpoint of a list, check if the midpoint is what you're looking for. If you are great, great - we're done.
+    If we're not, check if our mid number is greater or less than our target.
+
+    If it's greater:
+        - means our number must be in the left of the midpoint, so we make our end pointer to mid-1
+    If it's less:
+        - means our number must be in the right of the midpoint, so we make our start pointer to mid + 1
     '''
 
     if len(nums) == 0:
