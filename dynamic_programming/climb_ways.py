@@ -1,5 +1,14 @@
 class Solution:
-
+    '''
+    steps | ways
+    ------------
+        0      1
+        1      1
+        2      2 
+        3      3
+        4      5
+        5      8
+    '''
     def climbStairs_recursive(self, n):
         if n == 0 or n == 1:
             return 1
@@ -7,16 +16,7 @@ class Solution:
         return self.climbStairs_recursive(n-1) + self.climbStairs_recursive(n-2)
 
     def climbStairs(self, n):
-        '''
-        steps | ways
-        ------------
-          0      1
-          1      1
-          2      2 
-          3      3
-          4      5
-          5      8
-        '''
+
         if n <= 1:
             return 1
         
