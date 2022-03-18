@@ -27,8 +27,6 @@ class Solution:
         
         return dp[n]
 
-        
-        
 solution = Solution()
 n = 100
 print(solution.climbStairs(n))
