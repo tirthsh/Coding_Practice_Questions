@@ -25,6 +25,26 @@ class Solution:
             
         
         return largest_sum
+    
+    def maxSubArray(self, nums: List[int]) -> int:
+        '''
+        Input -> list of integers (list of numbers)
+        Output -> int (largest sum)
+        Assumptions -> must be contiguous subarray, can be positive or negative
+        Edge cases -> if length is 1, return nums[0]
+        Examples ->
+        Algo ->
+        Complexity -> 
+        '''
+        largest_sum = float("-inf")
+        tmp_sum = 0
+        
+        for i in range(0, len(nums)):
+            tmp_sum = max(nums[i], nums[i] + tmp_sum)
+            if tmp_sum > largest_sum:
+                largest_sum = tmp_sum
+            
+        return largest_sum
         
         
         
