@@ -9,7 +9,7 @@ class Solution:
         
         for i in range(0, len(board)):
             for j in range(0, len(board[0])):
-                #increment count by 1 if we see a shit
+                #increment count by 1 if we see a ship
                 #recurse on its surroundings
                 if board[i][j] == "X":
                     ship_count += 1

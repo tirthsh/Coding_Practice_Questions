@@ -40,6 +40,7 @@ class Solution:
         tmp_sum = 0
         
         for i in range(0, len(nums)):
+            #simulate what happens if we take contiuous nums
             tmp_sum = max(nums[i], nums[i] + tmp_sum)
             if tmp_sum > largest_sum:
                 largest_sum = tmp_sum

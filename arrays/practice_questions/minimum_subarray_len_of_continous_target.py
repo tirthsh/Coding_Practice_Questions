@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/minimum-size-subarray-sum/
+
 class Solution:
     def minSubArrayLen(self, target, nums):
         #check if nums is none or length is 0

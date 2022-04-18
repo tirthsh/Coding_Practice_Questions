@@ -1,3 +1,5 @@
+#https://aaronice.gitbook.io/lintcode/sweep-line/meeting-rooms-ii
+
 '''
 Given an array of meeting time intervals consisting of start and end times[[s1,e1],[s2,e2],...](si< ei), 
 find the minimum number of conference rooms required.
@@ -25,4 +27,5 @@ class Solution:
         intervals.sort(key=lambda each_interval: each_interval.start)
 
         #use minheap
+        
 
