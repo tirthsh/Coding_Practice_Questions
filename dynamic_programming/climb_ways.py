@@ -10,7 +10,7 @@ class Solution:
         5      8
     '''
     def climbStairs_recursive(self, n):
-        if n == 0 or n == 1:
+        if n <= 1:
             return 1
         
         return self.climbStairs_recursive(n-1) + self.climbStairs_recursive(n-2)

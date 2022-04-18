@@ -1,3 +1,5 @@
+#pre order -> root, left, right
+
 # Definition for a Node.
 class Node:
     def __init__(self, val=None, children=[]):

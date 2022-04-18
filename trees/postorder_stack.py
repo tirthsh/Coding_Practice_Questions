@@ -1,3 +1,5 @@
+#post order -> left, right, root
+
 #https://leetcode.com/problems/n-ary-tree-postorder-traversal/
 # Definition for a Node.
 class Node:
