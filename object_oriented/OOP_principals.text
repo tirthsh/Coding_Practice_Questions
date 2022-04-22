@@ -1,0 +1,54 @@
+#https://www.youtube.com/watch?v=yxf2spbpTSw&ab_channel=in28minutes-CloudMadeEasy
+
+1) Single Responsibility Principal (SRP)
+- a class should have one and only one reason to change - due to one responsibility 
+- ie. a class would have file class would have download, parse, upload methods 
+
+2) Open Closed Principal (OCP)
+- open for extension, closed for modification
+- ie. an area method, which would take a list of Shape objects and the area method would calculate area for each Shape
+    - but would have an if statement for each shape (i.e. if shape is rectangle calcualte area by l*w, if it's square calculate by l*l, etc)
+
+- if we add more and more shapes, we whould need to modify the area method - i.e. add more if statements
+
+Solution:
+- create an abstract class called Shape where it would include area method
+- each shape (i.e. Rectangle) class would extend from Shape class, and that will incldue area method
+- you can have one area method which takes in a list of objects of type Shape, and it would calculate 
+total of area, by adding are of each shape (since each Shape obj would have an area method in its self too)
+
+3) Liskov's Substitute Principal (LSP)
+- subtypes must be substituable for their base types 
+
+-ie. we have a Rectangle class which has setWidth() and setHeight() methods
+- now we have another class called Square which extends from Rectangle class 
+    - in the setWidth() and setHeight() method, i set width and height as the statement
+- now when im testing to get area of a rectangle, i can expect L*W, but if i do the same for Square that would not hold
+- so we would not be able to substite the Rectangle class for Square class
+
+- so we don't want to use inheritance just to save a few lines 
+- either create two different classes as a stand alone, or have an abstract class and extract from there
+    - eaching having area() method 
+
+4) Interface Segragation Principal (ISP)
+- dependency of one class to another one should depend on the smallest possible interface 
+    - clients should not be forced to implement interfaces they dont use 
+    - instead of a "fat" interface, better to have many small ones
+
+- i.e. suppose an Animal abstract class where it has an feed() and a groom() abstract method
+- now, supposed we extend two differnent classes from Animal, Dog and Tiger
+    - now of course groom() method doesn't make sense for a Tiger - so maybe we just leave it as a dummy method
+    - this violates the ISP 
+- instead, create two abstract classes  
+    - one for Animal, which has feed() abstract method
+    - another abstract class for Pet, which extends the Animal abstract class - this includes groom() method
+    - now when we create the Tiger class, we simply extend from Animal abstract class - wont include groom()
+    - when we create the Dog class, we can extend from Pet class - which would include the groom() method
+
+5) Dependecy Inversion Principal (DIP)
+- depend upond abstractions (interfaces) not on conceret classes
+
+Quotes:
+- High-level modules should not depend on low-level modules. Both should depend on abstractions
+- Abstractions should not depend on details. Details should depend on abstractions.
+
