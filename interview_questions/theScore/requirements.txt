@@ -1,0 +1,2 @@
+1. import json  -> to work with json objects
+2. import urllib -> to read a file from a url

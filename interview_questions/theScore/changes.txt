@@ -1,0 +1,16 @@
+1. Make rate values as float, not string 
+    - this way you dont need to cast to a float / int every time you need to do an operation
+2. Make capacity value as integer, not string
+    - same reason as above
+3. According to the Google JSON style guide, there is a standward way to report Latitude and Longitude 
+    - this was not followed in dataset
+    - should be in ±DD.DDDD±DDD.DDDD degrees format
+    - the dataset had seperate Longitude and Latitude keys/values pair
+4. In the rate values, there were also values like "No Maximum" or "NO MAXIMUM" or "Free" or even no rates 
+    - this is hard to parse through as there's no standard 
+    - a possible way to help standarsize values is use an ENUM object
+
+
+Reference:
+- Google JSON style Guide: 
+https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Latitude/Longitude_Property_Values#Latitude/Longitude_Property_Values
